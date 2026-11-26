@@ -1,6 +1,6 @@
 # Physics audit harness
 
-The [pilot handoff](handoff/READ-ME.txt) includes the PhysLiteBench patch, run plans, and results.
+The [pilot handoff](handoff/README.md) explains how to patch PhysLiteBench and run the harness.
 
 The pilot uses the first three task names in alphabetical order from the frozen roster
 (entropy anomaly, finite-ion cloud and finite-layer phoresis). The other ten are held

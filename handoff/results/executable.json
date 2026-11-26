@@ -1,0 +1,107 @@
+{
+  "planned": 3,
+  "recorded": 3,
+  "trials": [
+    {
+      "trial": "entropy-anomaly--delayed-executa__hVA2Fnj",
+      "task": "entropy-anomaly",
+      "condition": "delayed-executable",
+      "outcome": "fail",
+      "hidden_reward": 0.0,
+      "exceptions": [
+        "AgentTimeoutError"
+      ],
+      "check_quality": "not_discriminating",
+      "generated_test_sha256": "e7f18d19b0f14176a4742de89984afb6b9a4770c7729d09f2ef13e20b846b303",
+      "generated_test": "checks/entropy-anomaly.py",
+      "oracle": {
+        "command_result": "jobs/audit-dev-executable-first-20261120/replay/entropy-anomaly--delayed-executa__hVA2Fnj/oracle/command-result.json",
+        "output": "jobs/audit-dev-executable-first-20261120/replay/entropy-anomaly--delayed-executa__hVA2Fnj/oracle/command-output.txt",
+        "exit": 0,
+        "cases": {
+          "audit/test_physics.py::test_equilibrium_zero_excess_entropy": "pass"
+        },
+        "errors": [],
+        "status": "accept"
+      },
+      "shortcut": {
+        "command_result": "jobs/audit-dev-executable-first-20261120/replay/entropy-anomaly--delayed-executa__hVA2Fnj/shortcut/command-result.json",
+        "output": "jobs/audit-dev-executable-first-20261120/replay/entropy-anomaly--delayed-executa__hVA2Fnj/shortcut/command-output.txt",
+        "exit": 0,
+        "cases": {
+          "audit/test_physics.py::test_equilibrium_zero_excess_entropy": "pass"
+        },
+        "errors": [],
+        "status": "accept"
+      }
+    },
+    {
+      "trial": "finite-ion-cloud--delayed-execut__pgwZ39r",
+      "task": "finite-ion-cloud",
+      "condition": "delayed-executable",
+      "outcome": "fail",
+      "hidden_reward": 0.0,
+      "exceptions": [
+        "AgentTimeoutError"
+      ],
+      "check_quality": "not_discriminating",
+      "generated_test_sha256": "c7951854c050cb36a15957aea15776e00305ae6b9deadb8345f33d2c612dcda6",
+      "generated_test": "checks/finite-ion-cloud.py",
+      "oracle": {
+        "command_result": "jobs/audit-dev-executable-first-20261120/replay/finite-ion-cloud--delayed-execut__pgwZ39r/oracle/command-result.json",
+        "output": "jobs/audit-dev-executable-first-20261120/replay/finite-ion-cloud--delayed-execut__pgwZ39r/oracle/command-output.txt",
+        "exit": 0,
+        "cases": {
+          "audit/test_physics.py::test_one_ion_boundary_formula_and_disk_radius_independence": "pass"
+        },
+        "errors": [],
+        "status": "accept"
+      },
+      "shortcut": {
+        "command_result": "jobs/audit-dev-executable-first-20261120/replay/finite-ion-cloud--delayed-execut__pgwZ39r/shortcut/command-result.json",
+        "output": "jobs/audit-dev-executable-first-20261120/replay/finite-ion-cloud--delayed-execut__pgwZ39r/shortcut/command-output.txt",
+        "exit": 0,
+        "cases": {
+          "audit/test_physics.py::test_one_ion_boundary_formula_and_disk_radius_independence": "pass"
+        },
+        "errors": [],
+        "status": "accept"
+      }
+    },
+    {
+      "trial": "finite-layer-phoresis--delayed-e__GmjJmWp",
+      "task": "finite-layer-phoresis",
+      "condition": "delayed-executable",
+      "outcome": "fail",
+      "hidden_reward": 0.0,
+      "exceptions": [
+        "AgentTimeoutError"
+      ],
+      "check_quality": "not_discriminating",
+      "generated_test_sha256": "26191837201f21add4e5fb5fe34e5b9f0ec5e4bac8e6c7b1405285e83983b974",
+      "generated_test": "checks/finite-layer-phoresis.py",
+      "oracle": {
+        "command_result": "jobs/audit-dev-executable-first-20261120/replay/finite-layer-phoresis--delayed-e__GmjJmWp/oracle/command-result.json",
+        "output": "jobs/audit-dev-executable-first-20261120/replay/finite-layer-phoresis--delayed-e__GmjJmWp/oracle/command-output.txt",
+        "exit": 0,
+        "cases": {
+          "audit/test_physics.py::test_zero_interaction_has_zero_response": "pass",
+          "audit/test_physics.py::test_attraction_and_repulsion_have_derivation_signs": "pass"
+        },
+        "errors": [],
+        "status": "accept"
+      },
+      "shortcut": {
+        "command_result": "jobs/audit-dev-executable-first-20261120/replay/finite-layer-phoresis--delayed-e__GmjJmWp/shortcut/command-result.json",
+        "output": "jobs/audit-dev-executable-first-20261120/replay/finite-layer-phoresis--delayed-e__GmjJmWp/shortcut/command-output.txt",
+        "exit": 0,
+        "cases": {
+          "audit/test_physics.py::test_zero_interaction_has_zero_response": "pass",
+          "audit/test_physics.py::test_attraction_and_repulsion_have_derivation_signs": "pass"
+        },
+        "errors": [],
+        "status": "accept"
+      }
+    }
+  ]
+}

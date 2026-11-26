@@ -1,0 +1,27 @@
+Physics audit pilot, November 20, 2026
+
+PhysLiteBench base: luna-high-qualified-tasks at 1e9c32e264744e455b652464cb5bc3e162e8989e
+PLB_Harness: main at 37972ff6b6592293ec1b64ada17e0ef07a00ee08
+
+The pilot report records the benchmark base plus local edits. The included
+patch is the current local runner integration for the separately published
+PLB_Harness. The harness lived inside the benchmark during the pilot.
+To use the patch, place the two checkouts side by side under the names
+PhysLiteBench and PLB_Harness. From the clean benchmark base, run
+git apply /path/to/physlitebench-audit.patch. From PLB_Harness, run
+python3 run_audit_pilot.py --prepare /path/to/new-batch
+to stage a pilot without starting model trials.
+
+The three plans retain their original job directory names under jobs/.
+The initial written summary.json is a partial snapshot with nine observations.
+The corrected written batch saved its final summary as comparison.json.
+The identical file in results/ is named written.json. It combines 15 baseline
+attempts (including setup replacements) with 30 corrected written audits.
+The three delayed executable trials and their post-run control replays are
+summarized in results/executable.json. The report and generated checks are
+included alongside the two final JSON files.
+
+Verification used clean tracked files from the two commits above. The patch
+enabled the single-task audit option and pilot preparation. The prepared
+stage files for all six corrected written and three executable task/condition
+pairs matched the archived stage files byte for byte.

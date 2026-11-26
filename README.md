@@ -1,5 +1,7 @@
 # Physics audit harness
 
+The [pilot handoff](handoff/READ-ME.txt) includes the PhysLiteBench patch, run plans, and results.
+
 The pilot uses the first three task names in alphabetical order from the frozen roster
 (entropy anomaly, finite-ion cloud and finite-layer phoresis). The other ten are held
 out. Each development task gets five fresh Luna High attempts per condition. The

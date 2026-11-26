@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    "entropy-anomaly",
+    "finite-ion-cloud",
+    "finite-layer-phoresis"
+  ],
+  "conditions": [
+    "delayed-executable"
+  ],
+  "trials_per_cell": 1,
+  "held_out": [
+    "hard-rod-current",
+    "hierarchical-glass-overlaps",
+    "insulating-mhd-duct",
+    "magnetic-tracer",
+    "reaction-diffusion",
+    "ring-current-fluctuations",
+    "rotating-reservoir",
+    "single-file-memory",
+    "superconducting-heat",
+    "swirling-heat-tails"
+  ],
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "high",
+  "hint": "none"
+}

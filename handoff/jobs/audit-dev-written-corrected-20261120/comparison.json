@@ -1,0 +1,2918 @@
+{
+  "baseline_source": "audit-dev-written-20261120",
+  "audit_source": "audit-dev-written-corrected-20261120",
+  "plan": {
+    "tasks": [
+      "entropy-anomaly",
+      "finite-ion-cloud",
+      "finite-layer-phoresis"
+    ],
+    "conditions": [
+      "baseline",
+      "early-written",
+      "delayed-written"
+    ],
+    "trials_per_cell": 5,
+    "held_out": [
+      "hard-rod-current",
+      "hierarchical-glass-overlaps",
+      "insulating-mhd-duct",
+      "magnetic-tracer",
+      "reaction-diffusion",
+      "ring-current-fluctuations",
+      "rotating-reservoir",
+      "single-file-memory",
+      "superconducting-heat",
+      "swirling-heat-tails"
+    ],
+    "model": "gpt-5.6-luna",
+    "reasoning_effort": "high",
+    "hint": "none"
+  },
+  "panels": {
+    "baseline": {
+      "planned": 15,
+      "recorded": 15,
+      "outcomes": {
+        "fail": 11,
+        "pass": 4
+      },
+      "passes": 4,
+      "hidden_passes": 4,
+      "exception_free_passes": 4,
+      "pass_rate": 0.26666666666666666
+    },
+    "early-written": {
+      "planned": 15,
+      "recorded": 15,
+      "outcomes": {
+        "fail": 14,
+        "timeout": 1
+      },
+      "passes": 0,
+      "hidden_passes": 0,
+      "exception_free_passes": 0,
+      "pass_rate": 0.0,
+      "delta_percentage_points": -26.667
+    },
+    "delayed-written": {
+      "planned": 15,
+      "recorded": 15,
+      "outcomes": {
+        "timeout": 2,
+        "fail": 10,
+        "pass": 3
+      },
+      "passes": 3,
+      "hidden_passes": 4,
+      "exception_free_passes": 0,
+      "pass_rate": 0.2,
+      "delta_percentage_points": -6.667
+    }
+  },
+  "cell_outcomes": {
+    "entropy-anomaly--baseline": {
+      "fail": 5
+    },
+    "finite-ion-cloud--baseline": {
+      "pass": 3,
+      "fail": 2
+    },
+    "finite-layer-phoresis--baseline": {
+      "fail": 4,
+      "pass": 1
+    },
+    "entropy-anomaly--early-written": {
+      "fail": 4,
+      "timeout": 1
+    },
+    "finite-ion-cloud--early-written": {
+      "fail": 5
+    },
+    "finite-layer-phoresis--early-written": {
+      "fail": 5
+    },
+    "entropy-anomaly--delayed-written": {
+      "timeout": 1,
+      "fail": 4
+    },
+    "finite-ion-cloud--delayed-written": {
+      "fail": 3,
+      "pass": 1,
+      "timeout": 1
+    },
+    "finite-layer-phoresis--delayed-written": {
+      "fail": 3,
+      "pass": 2
+    }
+  },
+  "slots": {
+    "entropy-anomaly--baseline__E8bVhiz": {
+      "cell": "entropy-anomaly--baseline",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--baseline__E8bVhiz",
+          "status": "error",
+          "reward": null,
+          "errors": [
+            "NetworkConnectionError"
+          ],
+          "wall_seconds": 70.477903,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": null,
+              "exception": "NetworkConnectionError",
+              "harbor_exception": "NetworkConnectionError",
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": null,
+              "n_cache_tokens": null,
+              "n_output_tokens": null,
+              "cost_usd": null
+            }
+          ],
+          "totals": {
+            "seconds": null,
+            "n_input_tokens": null,
+            "n_cache_tokens": null,
+            "n_output_tokens": null,
+            "cost_usd": null
+          },
+          "pre_agent_infrastructure_failure": true,
+          "batch": "audit-dev-written-20261120"
+        },
+        {
+          "trial": "r01-entropy-anomaly--baseline__D4J7TBC",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 206.692042,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 198.391147,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 304836,
+              "n_cache_tokens": 280320,
+              "n_output_tokens": 9806,
+              "cost_usd": 0.022276799999999996
+            }
+          ],
+          "totals": {
+            "seconds": 198.391147,
+            "n_input_tokens": 304836,
+            "n_cache_tokens": 280320,
+            "n_output_tokens": 9806,
+            "cost_usd": 0.022276799999999996
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "round-01"
+        }
+      ]
+    },
+    "entropy-anomaly--baseline__ES8qtiH": {
+      "cell": "entropy-anomaly--baseline",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--baseline__ES8qtiH",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 822.308054,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 251.446388,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 502263,
+              "n_cache_tokens": 472576,
+              "n_output_tokens": 12499,
+              "cost_usd": 0.03038772
+            }
+          ],
+          "totals": {
+            "seconds": 251.446388,
+            "n_input_tokens": 502263,
+            "n_cache_tokens": 472576,
+            "n_output_tokens": 12499,
+            "cost_usd": 0.03038772
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "entropy-anomaly--baseline__LsCYVNy": {
+      "cell": "entropy-anomaly--baseline",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--baseline__LsCYVNy",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 276.965819,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 214.386664,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 344081,
+              "n_cache_tokens": 321536,
+              "n_output_tokens": 10519,
+              "cost_usd": 0.02356252
+            }
+          ],
+          "totals": {
+            "seconds": 214.386664,
+            "n_input_tokens": 344081,
+            "n_cache_tokens": 321536,
+            "n_output_tokens": 10519,
+            "cost_usd": 0.02356252
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "entropy-anomaly--baseline__Lsj4CJV": {
+      "cell": "entropy-anomaly--baseline",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--baseline__Lsj4CJV",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 301.52343,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 238.681309,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 467895,
+              "n_cache_tokens": 423936,
+              "n_output_tokens": 12149,
+              "cost_usd": 0.03184931999999999
+            }
+          ],
+          "totals": {
+            "seconds": 238.681309,
+            "n_input_tokens": 467895,
+            "n_cache_tokens": 423936,
+            "n_output_tokens": 12149,
+            "cost_usd": 0.03184931999999999
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "entropy-anomaly--baseline__nRXHPFC": {
+      "cell": "entropy-anomaly--baseline",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--baseline__nRXHPFC",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 295.51141,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 185.740617,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 281945,
+              "n_cache_tokens": 260480,
+              "n_output_tokens": 9001,
+              "cost_usd": 0.020303799999999997
+            }
+          ],
+          "totals": {
+            "seconds": 185.740617,
+            "n_input_tokens": 281945,
+            "n_cache_tokens": 260480,
+            "n_output_tokens": 9001,
+            "cost_usd": 0.020303799999999997
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-ion-cloud--baseline__66Ni9mc": {
+      "cell": "finite-ion-cloud--baseline",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--baseline__66Ni9mc",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [],
+          "wall_seconds": 515.941777,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 426.298222,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 733313,
+              "n_cache_tokens": 694528,
+              "n_output_tokens": 16115,
+              "cost_usd": 0.040985560000000004
+            }
+          ],
+          "totals": {
+            "seconds": 426.298222,
+            "n_input_tokens": 733313,
+            "n_cache_tokens": 694528,
+            "n_output_tokens": 16115,
+            "cost_usd": 0.040985560000000004
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-ion-cloud--baseline__EUzTvmA": {
+      "cell": "finite-ion-cloud--baseline",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--baseline__EUzTvmA",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [],
+          "wall_seconds": 565.242916,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 406.136639,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 873244,
+              "n_cache_tokens": 826112,
+              "n_output_tokens": 16354,
+              "cost_usd": 0.04557344
+            }
+          ],
+          "totals": {
+            "seconds": 406.136639,
+            "n_input_tokens": 873244,
+            "n_cache_tokens": 826112,
+            "n_output_tokens": 16354,
+            "cost_usd": 0.04557344
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-ion-cloud--baseline__M2yMsZj": {
+      "cell": "finite-ion-cloud--baseline",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--baseline__M2yMsZj",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [],
+          "wall_seconds": 485.821004,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 337.471842,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 532514,
+              "n_cache_tokens": 496768,
+              "n_output_tokens": 16431,
+              "cost_usd": 0.036801759999999996
+            }
+          ],
+          "totals": {
+            "seconds": 337.471842,
+            "n_input_tokens": 532514,
+            "n_cache_tokens": 496768,
+            "n_output_tokens": 16431,
+            "cost_usd": 0.036801759999999996
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-ion-cloud--baseline__g8P382u": {
+      "cell": "finite-ion-cloud--baseline",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--baseline__g8P382u",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 217.055522,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 156.46045,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 222566,
+              "n_cache_tokens": 203648,
+              "n_output_tokens": 7433,
+              "cost_usd": 0.016776160000000002
+            }
+          ],
+          "totals": {
+            "seconds": 156.46045,
+            "n_input_tokens": 222566,
+            "n_cache_tokens": 203648,
+            "n_output_tokens": 7433,
+            "cost_usd": 0.016776160000000002
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-ion-cloud--baseline__kBMiEjy": {
+      "cell": "finite-ion-cloud--baseline",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--baseline__kBMiEjy",
+          "status": "error",
+          "reward": null,
+          "errors": [
+            "RuntimeError"
+          ],
+          "wall_seconds": 1.418877,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": null,
+              "exception": "RuntimeError",
+              "harbor_exception": "RuntimeError",
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": null,
+              "n_cache_tokens": null,
+              "n_output_tokens": null,
+              "cost_usd": null
+            }
+          ],
+          "totals": {
+            "seconds": null,
+            "n_input_tokens": null,
+            "n_cache_tokens": null,
+            "n_output_tokens": null,
+            "cost_usd": null
+          },
+          "pre_agent_infrastructure_failure": true,
+          "batch": "audit-dev-written-20261120"
+        },
+        {
+          "trial": "r04-finite-ion-cloud--baseline__Rvcmjxk",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 149.813334,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 140.931901,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 210644,
+              "n_cache_tokens": 194304,
+              "n_output_tokens": 6538,
+              "cost_usd": 0.01499968
+            }
+          ],
+          "totals": {
+            "seconds": 140.931901,
+            "n_input_tokens": 210644,
+            "n_cache_tokens": 194304,
+            "n_output_tokens": 6538,
+            "cost_usd": 0.01499968
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "round-01"
+        }
+      ]
+    },
+    "finite-layer-phoresis--baseline__W72ruHB": {
+      "cell": "finite-layer-phoresis--baseline",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--baseline__W72ruHB",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 149.927519,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 63.319439,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 100206,
+              "n_cache_tokens": 90624,
+              "n_output_tokens": 2670,
+              "cost_usd": 0.00693288
+            }
+          ],
+          "totals": {
+            "seconds": 63.319439,
+            "n_input_tokens": 100206,
+            "n_cache_tokens": 90624,
+            "n_output_tokens": 2670,
+            "cost_usd": 0.00693288
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-layer-phoresis--baseline__Wwe6JAe": {
+      "cell": "finite-layer-phoresis--baseline",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--baseline__Wwe6JAe",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 187.428621,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 100.284324,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 155473,
+              "n_cache_tokens": 139776,
+              "n_output_tokens": 4515,
+              "cost_usd": 0.011352919999999999
+            }
+          ],
+          "totals": {
+            "seconds": 100.284324,
+            "n_input_tokens": 155473,
+            "n_cache_tokens": 139776,
+            "n_output_tokens": 4515,
+            "cost_usd": 0.011352919999999999
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-layer-phoresis--baseline__cLXvbw6": {
+      "cell": "finite-layer-phoresis--baseline",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--baseline__cLXvbw6",
+          "status": "error",
+          "reward": null,
+          "errors": [
+            "RuntimeError"
+          ],
+          "wall_seconds": 1.547475,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": null,
+              "exception": "RuntimeError",
+              "harbor_exception": "RuntimeError",
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": null,
+              "n_cache_tokens": null,
+              "n_output_tokens": null,
+              "cost_usd": null
+            }
+          ],
+          "totals": {
+            "seconds": null,
+            "n_input_tokens": null,
+            "n_cache_tokens": null,
+            "n_output_tokens": null,
+            "cost_usd": null
+          },
+          "pre_agent_infrastructure_failure": true,
+          "batch": "audit-dev-written-20261120"
+        },
+        {
+          "trial": "r07-finite-layer-phoresis--basel__HLYcJ52",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 104.749505,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 96.227763,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 177879,
+              "n_cache_tokens": 162048,
+              "n_output_tokens": 4193,
+              "cost_usd": 0.01143876
+            }
+          ],
+          "totals": {
+            "seconds": 96.227763,
+            "n_input_tokens": 177879,
+            "n_cache_tokens": 162048,
+            "n_output_tokens": 4193,
+            "cost_usd": 0.01143876
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "round-01"
+        }
+      ]
+    },
+    "finite-layer-phoresis--baseline__rwk9j6r": {
+      "cell": "finite-layer-phoresis--baseline",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--baseline__rwk9j6r",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [],
+          "wall_seconds": 631.676193,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 553.428668,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 268184,
+              "n_cache_tokens": 244864,
+              "n_output_tokens": 6433,
+              "cost_usd": 0.01810416
+            }
+          ],
+          "totals": {
+            "seconds": 553.428668,
+            "n_input_tokens": 268184,
+            "n_cache_tokens": 244864,
+            "n_output_tokens": 6433,
+            "cost_usd": 0.01810416
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "finite-layer-phoresis--baseline__ttE4fU5": {
+      "cell": "finite-layer-phoresis--baseline",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--baseline__ttE4fU5",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 309.69549,
+          "steps": [
+            {
+              "name": "baseline",
+              "seconds": 236.741446,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": null,
+              "handoff": null,
+              "n_input_tokens": 199912,
+              "n_cache_tokens": 174976,
+              "n_output_tokens": 11916,
+              "cost_usd": 0.02278592
+            }
+          ],
+          "totals": {
+            "seconds": 236.741446,
+            "n_input_tokens": 199912,
+            "n_cache_tokens": 174976,
+            "n_output_tokens": 11916,
+            "cost_usd": 0.02278592
+          },
+          "pre_agent_infrastructure_failure": false,
+          "batch": "audit-dev-written-20261120"
+        }
+      ]
+    },
+    "entropy-anomaly--delayed-written__8m5rv9E": {
+      "cell": "entropy-anomaly--delayed-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--delayed-written__8m5rv9E",
+          "status": "timeout",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 557.1833,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 78.829924,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 141314,
+              "n_cache_tokens": 128384,
+              "n_output_tokens": 3680,
+              "cost_usd": 0.00956968
+            },
+            {
+              "name": "design",
+              "seconds": 70.312531,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 60603,
+              "n_cache_tokens": 52352,
+              "n_output_tokens": 1432,
+              "cost_usd": 0.00441564
+            },
+            {
+              "name": "review",
+              "seconds": 100.31974,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 35356,
+              "n_cache_tokens": 30720,
+              "n_output_tokens": 882,
+              "cost_usd": 0.0026
+            },
+            {
+              "name": "repair",
+              "seconds": 295.293076,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 435885,
+              "n_cache_tokens": 408960,
+              "n_output_tokens": 14309,
+              "cost_usd": 0.030735
+            }
+          ],
+          "totals": {
+            "seconds": 544.755271,
+            "n_input_tokens": 673158,
+            "n_cache_tokens": 620416,
+            "n_output_tokens": 20303,
+            "cost_usd": 0.04732032
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--delayed-written__Yy3yvQh": {
+      "cell": "entropy-anomaly--delayed-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--delayed-written__Yy3yvQh",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 445.935757,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.351534,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 33787,
+              "n_cache_tokens": 28800,
+              "n_output_tokens": 4196,
+              "cost_usd": 0.0066086
+            },
+            {
+              "name": "design",
+              "seconds": 70.368494,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 61871,
+              "n_cache_tokens": 54144,
+              "n_output_tokens": 1850,
+              "cost_usd": 0.00484828
+            },
+            {
+              "name": "review",
+              "seconds": 100.30955,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 53381,
+              "n_cache_tokens": 40576,
+              "n_output_tokens": 2670,
+              "cost_usd": 0.00657652
+            },
+            {
+              "name": "repair",
+              "seconds": 148.158291,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 321281,
+              "n_cache_tokens": 299648,
+              "n_output_tokens": 6895,
+              "cost_usd": 0.01859356
+            }
+          ],
+          "totals": {
+            "seconds": 434.187869,
+            "n_input_tokens": 470320,
+            "n_cache_tokens": 423168,
+            "n_output_tokens": 15611,
+            "cost_usd": 0.03662696
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--delayed-written__cg4vJVj": {
+      "cell": "entropy-anomaly--delayed-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--delayed-written__cg4vJVj",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 419.037295,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 88.83052,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 86832,
+              "n_cache_tokens": 74496,
+              "n_output_tokens": 4309,
+              "cost_usd": 0.009127920000000001
+            },
+            {
+              "name": "design",
+              "seconds": 70.340646,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 63526,
+              "n_cache_tokens": 57216,
+              "n_output_tokens": 1608,
+              "cost_usd": 0.00433592
+            },
+            {
+              "name": "review",
+              "seconds": 100.316683,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 80059,
+              "n_cache_tokens": 61312,
+              "n_output_tokens": 2755,
+              "cost_usd": 0.00828164
+            },
+            {
+              "name": "repair",
+              "seconds": 147.343444,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 434005,
+              "n_cache_tokens": 391168,
+              "n_output_tokens": 6903,
+              "cost_usd": 0.024674360000000003
+            }
+          ],
+          "totals": {
+            "seconds": 406.831293,
+            "n_input_tokens": 664422,
+            "n_cache_tokens": 584192,
+            "n_output_tokens": 15575,
+            "cost_usd": 0.046419840000000004
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--delayed-written__ep5coya": {
+      "cell": "entropy-anomaly--delayed-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--delayed-written__ep5coya",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 481.591795,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.310297,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 63799,
+              "n_cache_tokens": 54272,
+              "n_output_tokens": 4144,
+              "cost_usd": 0.00796364
+            },
+            {
+              "name": "design",
+              "seconds": 70.352751,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 75325,
+              "n_cache_tokens": 56960,
+              "n_output_tokens": 1807,
+              "cost_usd": 0.0069806
+            },
+            {
+              "name": "review",
+              "seconds": 100.335379,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 73242,
+              "n_cache_tokens": 62464,
+              "n_output_tokens": 2931,
+              "cost_usd": 0.006922079999999999
+            },
+            {
+              "name": "repair",
+              "seconds": 183.764741,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 273036,
+              "n_cache_tokens": 249088,
+              "n_output_tokens": 9078,
+              "cost_usd": 0.020664959999999996
+            }
+          ],
+          "totals": {
+            "seconds": 469.763168,
+            "n_input_tokens": 485402,
+            "n_cache_tokens": 422784,
+            "n_output_tokens": 17960,
+            "cost_usd": 0.04253127999999999
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--delayed-written__hgnBXJT": {
+      "cell": "entropy-anomaly--delayed-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--delayed-written__hgnBXJT",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 565.932688,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.324753,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 83236,
+              "n_cache_tokens": 71936,
+              "n_output_tokens": 4389,
+              "cost_usd": 0.00896552
+            },
+            {
+              "name": "design",
+              "seconds": 70.332287,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 63716,
+              "n_cache_tokens": 53760,
+              "n_output_tokens": 1800,
+              "cost_usd": 0.0052264
+            },
+            {
+              "name": "review",
+              "seconds": 100.322224,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 47654,
+              "n_cache_tokens": 39936,
+              "n_output_tokens": 939,
+              "cost_usd": 0.00346912
+            },
+            {
+              "name": "repair",
+              "seconds": 267.09313,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 706116,
+              "n_cache_tokens": 663552,
+              "n_output_tokens": 13275,
+              "cost_usd": 0.037713840000000005
+            }
+          ],
+          "totals": {
+            "seconds": 553.072394,
+            "n_input_tokens": 900722,
+            "n_cache_tokens": 829184,
+            "n_output_tokens": 20403,
+            "cost_usd": 0.05537488
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--early-written__3qcF8Xj": {
+      "cell": "entropy-anomaly--early-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--early-written__3qcF8Xj",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 345.251049,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 59.701102,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 71623,
+              "n_cache_tokens": 60032,
+              "n_output_tokens": 2639,
+              "cost_usd": 0.006685639999999999
+            },
+            {
+              "name": "design",
+              "seconds": 70.352596,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 126526,
+              "n_cache_tokens": 113920,
+              "n_output_tokens": 2612,
+              "cost_usd": 0.007934
+            },
+            {
+              "name": "review",
+              "seconds": 100.35052,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 54765,
+              "n_cache_tokens": 44416,
+              "n_output_tokens": 3010,
+              "cost_usd": 0.00657012
+            },
+            {
+              "name": "repair",
+              "seconds": 102.454712,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 159713,
+              "n_cache_tokens": 138496,
+              "n_output_tokens": 4862,
+              "cost_usd": 0.012847719999999998
+            }
+          ],
+          "totals": {
+            "seconds": 332.85893,
+            "n_input_tokens": 412627,
+            "n_cache_tokens": 356864,
+            "n_output_tokens": 13123,
+            "cost_usd": 0.034037479999999995
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--early-written__HeHbQK9": {
+      "cell": "entropy-anomaly--early-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--early-written__HeHbQK9",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 407.873638,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 62.337976,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 84810,
+              "n_cache_tokens": 74112,
+              "n_output_tokens": 2825,
+              "cost_usd": 0.00701184
+            },
+            {
+              "name": "design",
+              "seconds": 70.297194,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 118093,
+              "n_cache_tokens": 91008,
+              "n_output_tokens": 2722,
+              "cost_usd": 0.01050356
+            },
+            {
+              "name": "review",
+              "seconds": 100.348496,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 52574,
+              "n_cache_tokens": 43520,
+              "n_output_tokens": 3356,
+              "cost_usd": 0.0067084
+            },
+            {
+              "name": "repair",
+              "seconds": 162.174538,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 210040,
+              "n_cache_tokens": 182528,
+              "n_output_tokens": 8117,
+              "cost_usd": 0.01889336
+            }
+          ],
+          "totals": {
+            "seconds": 395.158204,
+            "n_input_tokens": 465517,
+            "n_cache_tokens": 391168,
+            "n_output_tokens": 17020,
+            "cost_usd": 0.04311716
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--early-written__Hem7Gne": {
+      "cell": "entropy-anomaly--early-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--early-written__Hem7Gne",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 459.516108,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 83.564049,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 87605,
+              "n_cache_tokens": 76800,
+              "n_output_tokens": 3702,
+              "cost_usd": 0.0081394
+            },
+            {
+              "name": "design",
+              "seconds": 70.32591,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 148645,
+              "n_cache_tokens": 134144,
+              "n_output_tokens": 2873,
+              "cost_usd": 0.009030680000000001
+            },
+            {
+              "name": "review",
+              "seconds": 100.31691,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 55449,
+              "n_cache_tokens": 44928,
+              "n_output_tokens": 2946,
+              "cost_usd": 0.00653796
+            },
+            {
+              "name": "repair",
+              "seconds": 192.929192,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 377144,
+              "n_cache_tokens": 351232,
+              "n_output_tokens": 9561,
+              "cost_usd": 0.023680239999999998
+            }
+          ],
+          "totals": {
+            "seconds": 447.136061,
+            "n_input_tokens": 668843,
+            "n_cache_tokens": 607104,
+            "n_output_tokens": 19082,
+            "cost_usd": 0.04738828
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--early-written__Yp33son": {
+      "cell": "entropy-anomaly--early-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--early-written__Yp33son",
+          "status": "timeout",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 595.958482,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.3226,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 129193,
+              "n_cache_tokens": 114304,
+              "n_output_tokens": 5709,
+              "cost_usd": 0.01211468
+            },
+            {
+              "name": "design",
+              "seconds": 70.323128,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 134658,
+              "n_cache_tokens": 123264,
+              "n_output_tokens": 2972,
+              "cost_usd": 0.00831048
+            },
+            {
+              "name": "review",
+              "seconds": 100.329725,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 75142,
+              "n_cache_tokens": 61568,
+              "n_output_tokens": 3513,
+              "cost_usd": 0.00816176
+            },
+            {
+              "name": "repair",
+              "seconds": 295.395495,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 687562,
+              "n_cache_tokens": 641536,
+              "n_output_tokens": 11434,
+              "cost_usd": 0.03575672
+            }
+          ],
+          "totals": {
+            "seconds": 581.370948,
+            "n_input_tokens": 1026555,
+            "n_cache_tokens": 940672,
+            "n_output_tokens": 23628,
+            "cost_usd": 0.06434364
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "entropy-anomaly--early-written__mygs7J3": {
+      "cell": "entropy-anomaly--early-written",
+      "attempts": [
+        {
+          "trial": "entropy-anomaly--early-written__mygs7J3",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 469.500932,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 76.706918,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 109542,
+              "n_cache_tokens": 96384,
+              "n_output_tokens": 3560,
+              "cost_usd": 0.00883128
+            },
+            {
+              "name": "design",
+              "seconds": 70.304826,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 137899,
+              "n_cache_tokens": 127616,
+              "n_output_tokens": 2696,
+              "cost_usd": 0.00784412
+            },
+            {
+              "name": "review",
+              "seconds": 100.347299,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 106992,
+              "n_cache_tokens": 88064,
+              "n_output_tokens": 4728,
+              "cost_usd": 0.011220479999999998
+            },
+            {
+              "name": "repair",
+              "seconds": 208.980452,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 396002,
+              "n_cache_tokens": 368896,
+              "n_output_tokens": 10332,
+              "cost_usd": 0.02519752
+            }
+          ],
+          "totals": {
+            "seconds": 456.33949500000006,
+            "n_input_tokens": 750435,
+            "n_cache_tokens": 680960,
+            "n_output_tokens": 21316,
+            "cost_usd": 0.0530934
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--delayed-writte__4C9YvBL": {
+      "cell": "finite-ion-cloud--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--delayed-writte__4C9YvBL",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 426.336661,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.324267,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 0,
+              "n_input_tokens": 127014,
+              "n_cache_tokens": 115968,
+              "n_output_tokens": 5585,
+              "cost_usd": 0.01123056
+            },
+            {
+              "name": "design",
+              "seconds": 70.311809,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 53761,
+              "n_cache_tokens": 48768,
+              "n_output_tokens": 2655,
+              "cost_usd": 0.00515996
+            },
+            {
+              "name": "review",
+              "seconds": 100.343076,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 77463,
+              "n_cache_tokens": 68096,
+              "n_output_tokens": 4062,
+              "cost_usd": 0.008109719999999999
+            },
+            {
+              "name": "repair",
+              "seconds": 128.207063,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 153052,
+              "n_cache_tokens": 134912,
+              "n_output_tokens": 6231,
+              "cost_usd": 0.01380344
+            }
+          ],
+          "totals": {
+            "seconds": 414.186215,
+            "n_input_tokens": 411290,
+            "n_cache_tokens": 367744,
+            "n_output_tokens": 18533,
+            "cost_usd": 0.03830368
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--delayed-writte__A3yuMRs": {
+      "cell": "finite-ion-cloud--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--delayed-writte__A3yuMRs",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 395.8686,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 68.467032,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 75310,
+              "n_cache_tokens": 66432,
+              "n_output_tokens": 3036,
+              "cost_usd": 0.0067474399999999995
+            },
+            {
+              "name": "design",
+              "seconds": 70.335996,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 75719,
+              "n_cache_tokens": 69120,
+              "n_output_tokens": 1917,
+              "cost_usd": 0.0050026
+            },
+            {
+              "name": "review",
+              "seconds": 100.336813,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 87905,
+              "n_cache_tokens": 74112,
+              "n_output_tokens": 4321,
+              "cost_usd": 0.00942604
+            },
+            {
+              "name": "repair",
+              "seconds": 144.554611,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 296706,
+              "n_cache_tokens": 272896,
+              "n_output_tokens": 6664,
+              "cost_usd": 0.018216719999999995
+            }
+          ],
+          "totals": {
+            "seconds": 383.694452,
+            "n_input_tokens": 535640,
+            "n_cache_tokens": 482560,
+            "n_output_tokens": 15938,
+            "cost_usd": 0.03939279999999999
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--delayed-writte__CGDz2GH": {
+      "cell": "finite-ion-cloud--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--delayed-writte__CGDz2GH",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 515.795313,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.320845,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 77557,
+              "n_cache_tokens": 67584,
+              "n_output_tokens": 5407,
+              "cost_usd": 0.00983468
+            },
+            {
+              "name": "design",
+              "seconds": 46.432207,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 106162,
+              "n_cache_tokens": 97792,
+              "n_output_tokens": 1886,
+              "cost_usd": 0.0058930399999999996
+            },
+            {
+              "name": "review",
+              "seconds": 100.305676,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 49564,
+              "n_cache_tokens": 41728,
+              "n_output_tokens": 1028,
+              "cost_usd": 0.0036353599999999994
+            },
+            {
+              "name": "repair",
+              "seconds": 240.386537,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 607781,
+              "n_cache_tokens": 567680,
+              "n_output_tokens": 11501,
+              "cost_usd": 0.033174999999999996
+            }
+          ],
+          "totals": {
+            "seconds": 502.445265,
+            "n_input_tokens": 841064,
+            "n_cache_tokens": 774784,
+            "n_output_tokens": 19822,
+            "cost_usd": 0.052538079999999994
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--delayed-writte__U4XmBgU": {
+      "cell": "finite-ion-cloud--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--delayed-writte__U4XmBgU",
+          "status": "timeout",
+          "reward": 1.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 596.094439,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.302634,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 0,
+              "n_input_tokens": 19164,
+              "n_cache_tokens": 16640,
+              "n_output_tokens": 474,
+              "cost_usd": 0.0014064
+            },
+            {
+              "name": "design",
+              "seconds": 70.301335,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 45275,
+              "n_cache_tokens": 39168,
+              "n_output_tokens": 1596,
+              "cost_usd": 0.00391996
+            },
+            {
+              "name": "review",
+              "seconds": 100.331614,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 63691,
+              "n_cache_tokens": 53376,
+              "n_output_tokens": 3967,
+              "cost_usd": 0.00789092
+            },
+            {
+              "name": "repair",
+              "seconds": 295.341615,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 526472,
+              "n_cache_tokens": 486656,
+              "n_output_tokens": 12813,
+              "cost_usd": 0.03307192
+            }
+          ],
+          "totals": {
+            "seconds": 581.277198,
+            "n_input_tokens": 654602,
+            "n_cache_tokens": 595840,
+            "n_output_tokens": 18850,
+            "cost_usd": 0.046289199999999996
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--delayed-writte__xAPmxyr": {
+      "cell": "finite-ion-cloud--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--delayed-writte__xAPmxyr",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 360.710501,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 57.271298,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 60908,
+              "n_cache_tokens": 52736,
+              "n_output_tokens": 2614,
+              "cost_usd": 0.00582592
+            },
+            {
+              "name": "design",
+              "seconds": 70.326899,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 104092,
+              "n_cache_tokens": 95232,
+              "n_output_tokens": 3078,
+              "cost_usd": 0.007370239999999999
+            },
+            {
+              "name": "review",
+              "seconds": 100.314952,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 47931,
+              "n_cache_tokens": 41856,
+              "n_output_tokens": 851,
+              "cost_usd": 0.00307332
+            },
+            {
+              "name": "repair",
+              "seconds": 120.753113,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 134311,
+              "n_cache_tokens": 118144,
+              "n_output_tokens": 5863,
+              "cost_usd": 0.012631880000000002
+            }
+          ],
+          "totals": {
+            "seconds": 348.666262,
+            "n_input_tokens": 347242,
+            "n_cache_tokens": 307968,
+            "n_output_tokens": 12406,
+            "cost_usd": 0.02890136
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--early-written__4PN3YPW": {
+      "cell": "finite-ion-cloud--early-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--early-written__4PN3YPW",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 373.711149,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 71.952624,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 79888,
+              "n_cache_tokens": 70144,
+              "n_output_tokens": 3349,
+              "cost_usd": 0.007370479999999999
+            },
+            {
+              "name": "design",
+              "seconds": 70.320891,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 134980,
+              "n_cache_tokens": 122624,
+              "n_output_tokens": 2905,
+              "cost_usd": 0.00840968
+            },
+            {
+              "name": "review",
+              "seconds": 100.30916,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 67398,
+              "n_cache_tokens": 55808,
+              "n_output_tokens": 4317,
+              "cost_usd": 0.00861456
+            },
+            {
+              "name": "repair",
+              "seconds": 118.568091,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 151188,
+              "n_cache_tokens": 135296,
+              "n_output_tokens": 5757,
+              "cost_usd": 0.012792719999999999
+            }
+          ],
+          "totals": {
+            "seconds": 361.150766,
+            "n_input_tokens": 433454,
+            "n_cache_tokens": 383872,
+            "n_output_tokens": 16328,
+            "cost_usd": 0.037187439999999995
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--early-written__P69cmYo": {
+      "cell": "finite-ion-cloud--early-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--early-written__P69cmYo",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 388.129947,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 95.707943,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 83099,
+              "n_cache_tokens": 72576,
+              "n_output_tokens": 4655,
+              "cost_usd": 0.00914212
+            },
+            {
+              "name": "design",
+              "seconds": 64.929356,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 142798,
+              "n_cache_tokens": 132224,
+              "n_output_tokens": 2739,
+              "cost_usd": 0.00804608
+            },
+            {
+              "name": "review",
+              "seconds": 97.540298,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 108063,
+              "n_cache_tokens": 94976,
+              "n_output_tokens": 4758,
+              "cost_usd": 0.010226520000000001
+            },
+            {
+              "name": "repair",
+              "seconds": 117.77604,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 305736,
+              "n_cache_tokens": 272384,
+              "n_output_tokens": 4999,
+              "cost_usd": 0.01811688
+            }
+          ],
+          "totals": {
+            "seconds": 375.953637,
+            "n_input_tokens": 639696,
+            "n_cache_tokens": 572160,
+            "n_output_tokens": 17151,
+            "cost_usd": 0.0455316
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--early-written__YUfDFq8": {
+      "cell": "finite-ion-cloud--early-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--early-written__YUfDFq8",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 360.637273,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 49.961128,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 61927,
+              "n_cache_tokens": 53632,
+              "n_output_tokens": 2164,
+              "cost_usd": 0.00532844
+            },
+            {
+              "name": "design",
+              "seconds": 43.951912,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 85325,
+              "n_cache_tokens": 77056,
+              "n_output_tokens": 1727,
+              "cost_usd": 0.00526732
+            },
+            {
+              "name": "review",
+              "seconds": 100.304275,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 106824,
+              "n_cache_tokens": 92160,
+              "n_output_tokens": 4364,
+              "cost_usd": 0.010012799999999999
+            },
+            {
+              "name": "repair",
+              "seconds": 152.720238,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 236108,
+              "n_cache_tokens": 218496,
+              "n_output_tokens": 6271,
+              "cost_usd": 0.01541752
+            }
+          ],
+          "totals": {
+            "seconds": 346.937553,
+            "n_input_tokens": 490184,
+            "n_cache_tokens": 441344,
+            "n_output_tokens": 14526,
+            "cost_usd": 0.03602608
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--early-written__qz2UNEZ": {
+      "cell": "finite-ion-cloud--early-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--early-written__qz2UNEZ",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 416.082839,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 112.69677,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 82224,
+              "n_cache_tokens": 70528,
+              "n_output_tokens": 5635,
+              "cost_usd": 0.010511759999999998
+            },
+            {
+              "name": "design",
+              "seconds": 70.316323,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 126376,
+              "n_cache_tokens": 114816,
+              "n_output_tokens": 3033,
+              "cost_usd": 0.008247919999999999
+            },
+            {
+              "name": "review",
+              "seconds": 100.314979,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 94137,
+              "n_cache_tokens": 80256,
+              "n_output_tokens": 2937,
+              "cost_usd": 0.00790572
+            },
+            {
+              "name": "repair",
+              "seconds": 120.810942,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 263241,
+              "n_cache_tokens": 240512,
+              "n_output_tokens": 5253,
+              "cost_usd": 0.015659639999999996
+            }
+          ],
+          "totals": {
+            "seconds": 404.139014,
+            "n_input_tokens": 565978,
+            "n_cache_tokens": 506112,
+            "n_output_tokens": 16858,
+            "cost_usd": 0.042325039999999994
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-ion-cloud--early-written__z2fBVJv": {
+      "cell": "finite-ion-cloud--early-written",
+      "attempts": [
+        {
+          "trial": "finite-ion-cloud--early-written__z2fBVJv",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 399.708796,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.29733,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 120534,
+              "n_cache_tokens": 107264,
+              "n_output_tokens": 4721,
+              "cost_usd": 0.01046448
+            },
+            {
+              "name": "design",
+              "seconds": 70.33961,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 125175,
+              "n_cache_tokens": 115456,
+              "n_output_tokens": 2787,
+              "cost_usd": 0.007597319999999999
+            },
+            {
+              "name": "review",
+              "seconds": 100.309178,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 50337,
+              "n_cache_tokens": 42368,
+              "n_output_tokens": 3025,
+              "cost_usd": 0.006071159999999999
+            },
+            {
+              "name": "repair",
+              "seconds": 101.809976,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 168269,
+              "n_cache_tokens": 152832,
+              "n_output_tokens": 4709,
+              "cost_usd": 0.011794840000000001
+            }
+          ],
+          "totals": {
+            "seconds": 387.756094,
+            "n_input_tokens": 464315,
+            "n_cache_tokens": 417920,
+            "n_output_tokens": 15242,
+            "cost_usd": 0.035927799999999996
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--delayed-w__24dWFBR": {
+      "cell": "finite-layer-phoresis--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--delayed-w__24dWFBR",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 378.020425,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.314612,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 47481,
+              "n_cache_tokens": 38656,
+              "n_output_tokens": 4494,
+              "cost_usd": 0.00793092
+            },
+            {
+              "name": "design",
+              "seconds": 70.29771,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 96324,
+              "n_cache_tokens": 69376,
+              "n_output_tokens": 3156,
+              "cost_usd": 0.010564319999999999
+            },
+            {
+              "name": "review",
+              "seconds": 100.325844,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 106191,
+              "n_cache_tokens": 92032,
+              "n_output_tokens": 4581,
+              "cost_usd": 0.01016964
+            },
+            {
+              "name": "repair",
+              "seconds": 78.917574,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 161618,
+              "n_cache_tokens": 144000,
+              "n_output_tokens": 3541,
+              "cost_usd": 0.0106528
+            }
+          ],
+          "totals": {
+            "seconds": 364.85573999999997,
+            "n_input_tokens": 411614,
+            "n_cache_tokens": 344064,
+            "n_output_tokens": 15772,
+            "cost_usd": 0.03931768
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--delayed-w__5xoDJo6": {
+      "cell": "finite-layer-phoresis--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--delayed-w__5xoDJo6",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 364.275875,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.341737,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 48436,
+              "n_cache_tokens": 40192,
+              "n_output_tokens": 4976,
+              "cost_usd": 0.008423839999999998
+            },
+            {
+              "name": "design",
+              "seconds": 70.343956,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 142937,
+              "n_cache_tokens": 125440,
+              "n_output_tokens": 2334,
+              "cost_usd": 0.008808999999999997
+            },
+            {
+              "name": "review",
+              "seconds": 100.39152,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 86628,
+              "n_cache_tokens": 73472,
+              "n_output_tokens": 4246,
+              "cost_usd": 0.00919584
+            },
+            {
+              "name": "repair",
+              "seconds": 65.710567,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 88210,
+              "n_cache_tokens": 76544,
+              "n_output_tokens": 2919,
+              "cost_usd": 0.00736688
+            }
+          ],
+          "totals": {
+            "seconds": 351.78778,
+            "n_input_tokens": 366211,
+            "n_cache_tokens": 315648,
+            "n_output_tokens": 14475,
+            "cost_usd": 0.033795559999999995
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--delayed-w__TAM9kcw": {
+      "cell": "finite-layer-phoresis--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--delayed-w__TAM9kcw",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 353.336683,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 102.686914,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 81528,
+              "n_cache_tokens": 70784,
+              "n_output_tokens": 5061,
+              "cost_usd": 0.00963768
+            },
+            {
+              "name": "design",
+              "seconds": 70.355727,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 88842,
+              "n_cache_tokens": 80128,
+              "n_output_tokens": 2638,
+              "cost_usd": 0.00651096
+            },
+            {
+              "name": "review",
+              "seconds": 100.339615,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 81318,
+              "n_cache_tokens": 70144,
+              "n_output_tokens": 4579,
+              "cost_usd": 0.00913248
+            },
+            {
+              "name": "repair",
+              "seconds": 67.574339,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 176916,
+              "n_cache_tokens": 156928,
+              "n_output_tokens": 2935,
+              "cost_usd": 0.01065816
+            }
+          ],
+          "totals": {
+            "seconds": 340.956595,
+            "n_input_tokens": 428604,
+            "n_cache_tokens": 377984,
+            "n_output_tokens": 15213,
+            "cost_usd": 0.03593928
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--delayed-w__n3SGo4V": {
+      "cell": "finite-layer-phoresis--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--delayed-w__n3SGo4V",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 387.955994,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 79.879682,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 77877,
+              "n_cache_tokens": 67840,
+              "n_output_tokens": 3835,
+              "cost_usd": 0.0079662
+            },
+            {
+              "name": "design",
+              "seconds": 70.330103,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 64708,
+              "n_cache_tokens": 52096,
+              "n_output_tokens": 2123,
+              "cost_usd": 0.00611192
+            },
+            {
+              "name": "review",
+              "seconds": 93.391593,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 168773,
+              "n_cache_tokens": 152448,
+              "n_output_tokens": 4339,
+              "cost_usd": 0.011520759999999998
+            },
+            {
+              "name": "repair",
+              "seconds": 132.288122,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 126511,
+              "n_cache_tokens": 112000,
+              "n_output_tokens": 6443,
+              "cost_usd": 0.012873799999999998
+            }
+          ],
+          "totals": {
+            "seconds": 375.8895,
+            "n_input_tokens": 437869,
+            "n_cache_tokens": 384384,
+            "n_output_tokens": 16740,
+            "cost_usd": 0.038472679999999995
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--delayed-w__zgYwfJc": {
+      "cell": "finite-layer-phoresis--delayed-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--delayed-w__zgYwfJc",
+          "status": "pass",
+          "reward": 1.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 453.125262,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.306938,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 129203,
+              "n_cache_tokens": 116480,
+              "n_output_tokens": 5548,
+              "cost_usd": 0.0115318
+            },
+            {
+              "name": "design",
+              "seconds": 70.310084,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 57929,
+              "n_cache_tokens": 50688,
+              "n_output_tokens": 2921,
+              "cost_usd": 0.00596716
+            },
+            {
+              "name": "review",
+              "seconds": 100.308963,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 106432,
+              "n_cache_tokens": 93056,
+              "n_output_tokens": 3255,
+              "cost_usd": 0.00844232
+            },
+            {
+              "name": "repair",
+              "seconds": 155.053483,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 177663,
+              "n_cache_tokens": 160000,
+              "n_output_tokens": 7641,
+              "cost_usd": 0.0159018
+            }
+          ],
+          "totals": {
+            "seconds": 440.979468,
+            "n_input_tokens": 471227,
+            "n_cache_tokens": 420224,
+            "n_output_tokens": 19365,
+            "cost_usd": 0.04184308
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--early-wri__6UwbePN": {
+      "cell": "finite-layer-phoresis--early-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--early-wri__6UwbePN",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 314.27122,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 75.594538,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 72382,
+              "n_cache_tokens": 64256,
+              "n_output_tokens": 3470,
+              "cost_usd": 0.007074319999999999
+            },
+            {
+              "name": "design",
+              "seconds": 69.600507,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 174013,
+              "n_cache_tokens": 161536,
+              "n_output_tokens": 2726,
+              "cost_usd": 0.00899732
+            },
+            {
+              "name": "review",
+              "seconds": 100.320535,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 129045,
+              "n_cache_tokens": 114432,
+              "n_output_tokens": 4785,
+              "cost_usd": 0.01095324
+            },
+            {
+              "name": "repair",
+              "seconds": 56.393582,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 92650,
+              "n_cache_tokens": 83200,
+              "n_output_tokens": 2449,
+              "cost_usd": 0.006492800000000001
+            }
+          ],
+          "totals": {
+            "seconds": 301.909162,
+            "n_input_tokens": 468090,
+            "n_cache_tokens": 423424,
+            "n_output_tokens": 13430,
+            "cost_usd": 0.03351768
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--early-wri__RPrcdWM": {
+      "cell": "finite-layer-phoresis--early-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--early-wri__RPrcdWM",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 341.238401,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.296063,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 79269,
+              "n_cache_tokens": 68736,
+              "n_output_tokens": 5308,
+              "cost_usd": 0.009850919999999999
+            },
+            {
+              "name": "design",
+              "seconds": 62.009275,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 139663,
+              "n_cache_tokens": 128128,
+              "n_output_tokens": 2448,
+              "cost_usd": 0.007807159999999999
+            },
+            {
+              "name": "review",
+              "seconds": 89.474982,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 153268,
+              "n_cache_tokens": 136448,
+              "n_output_tokens": 4142,
+              "cost_usd": 0.011063360000000001
+            },
+            {
+              "name": "repair",
+              "seconds": 62.116077,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 101077,
+              "n_cache_tokens": 89088,
+              "n_output_tokens": 2695,
+              "cost_usd": 0.00741356
+            }
+          ],
+          "totals": {
+            "seconds": 328.896397,
+            "n_input_tokens": 473277,
+            "n_cache_tokens": 422400,
+            "n_output_tokens": 14593,
+            "cost_usd": 0.036135
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--early-wri__Z8FV79N": {
+      "cell": "finite-layer-phoresis--early-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--early-wri__Z8FV79N",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 350.373581,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 115.359314,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 96403,
+              "n_cache_tokens": 76672,
+              "n_output_tokens": 5042,
+              "cost_usd": 0.01153004
+            },
+            {
+              "name": "design",
+              "seconds": 70.299634,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 155660,
+              "n_cache_tokens": 145664,
+              "n_output_tokens": 2781,
+              "cost_usd": 0.008249679999999999
+            },
+            {
+              "name": "review",
+              "seconds": 76.550837,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 96485,
+              "n_cache_tokens": 85120,
+              "n_output_tokens": 3585,
+              "cost_usd": 0.008277399999999999
+            },
+            {
+              "name": "repair",
+              "seconds": 76.232923,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 156306,
+              "n_cache_tokens": 138496,
+              "n_output_tokens": 3332,
+              "cost_usd": 0.010330319999999999
+            }
+          ],
+          "totals": {
+            "seconds": 338.442708,
+            "n_input_tokens": 504854,
+            "n_cache_tokens": 445952,
+            "n_output_tokens": 14740,
+            "cost_usd": 0.038387439999999995
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--early-wri__jJMZKXS": {
+      "cell": "finite-layer-phoresis--early-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--early-wri__jJMZKXS",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [],
+          "wall_seconds": 355.399097,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 109.305501,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 110315,
+              "n_cache_tokens": 98304,
+              "n_output_tokens": 5402,
+              "cost_usd": 0.010850679999999998
+            },
+            {
+              "name": "design",
+              "seconds": 61.080934,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 113173,
+              "n_cache_tokens": 105344,
+              "n_output_tokens": 2434,
+              "cost_usd": 0.0065934800000000005
+            },
+            {
+              "name": "review",
+              "seconds": 97.29558,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 177867,
+              "n_cache_tokens": 140544,
+              "n_output_tokens": 4505,
+              "cost_usd": 0.015681479999999998
+            },
+            {
+              "name": "repair",
+              "seconds": 74.887341,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 155770,
+              "n_cache_tokens": 140544,
+              "n_output_tokens": 3323,
+              "cost_usd": 0.00984368
+            }
+          ],
+          "totals": {
+            "seconds": 342.569356,
+            "n_input_tokens": 557125,
+            "n_cache_tokens": 484736,
+            "n_output_tokens": 15664,
+            "cost_usd": 0.04296932
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    },
+    "finite-layer-phoresis--early-wri__k6kzcGw": {
+      "cell": "finite-layer-phoresis--early-written",
+      "attempts": [
+        {
+          "trial": "finite-layer-phoresis--early-wri__k6kzcGw",
+          "status": "fail",
+          "reward": 0.0,
+          "errors": [
+            "AgentTimeoutError"
+          ],
+          "wall_seconds": 312.281272,
+          "steps": [
+            {
+              "name": "derive",
+              "seconds": 83.467236,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 125121,
+              "n_cache_tokens": 113920,
+              "n_output_tokens": 3880,
+              "cost_usd": 0.009174600000000002
+            },
+            {
+              "name": "design",
+              "seconds": 59.386169,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 143406,
+              "n_cache_tokens": 132480,
+              "n_output_tokens": 2463,
+              "cost_usd": 0.007790399999999999
+            },
+            {
+              "name": "review",
+              "seconds": 100.317099,
+              "exception": "AgentTimeoutError",
+              "harbor_exception": "NonZeroAgentExitCodeError",
+              "closed": true,
+              "handoff": 1,
+              "n_input_tokens": 66540,
+              "n_cache_tokens": 55424,
+              "n_output_tokens": 4403,
+              "cost_usd": 0.00861528
+            },
+            {
+              "name": "repair",
+              "seconds": 56.889679,
+              "exception": null,
+              "harbor_exception": null,
+              "closed": true,
+              "handoff": null,
+              "n_input_tokens": 118542,
+              "n_cache_tokens": 98944,
+              "n_output_tokens": 2330,
+              "cost_usd": 0.00869448
+            }
+          ],
+          "totals": {
+            "seconds": 300.060183,
+            "n_input_tokens": 453609,
+            "n_cache_tokens": 400768,
+            "n_output_tokens": 13076,
+            "cost_usd": 0.03427476
+          },
+          "batch": "audit-dev-written-corrected-20261120",
+          "invalid_phase_closures": []
+        }
+      ]
+    }
+  }
+}

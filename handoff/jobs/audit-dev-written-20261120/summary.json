@@ -1,0 +1,515 @@
+{
+  "tasks": [
+    "entropy-anomaly",
+    "finite-ion-cloud",
+    "finite-layer-phoresis"
+  ],
+  "conditions": [
+    "baseline",
+    "early-written",
+    "delayed-written"
+  ],
+  "trials_per_cell": 5,
+  "held_out": [
+    "hard-rod-current",
+    "hierarchical-glass-overlaps",
+    "insulating-mhd-duct",
+    "magnetic-tracer",
+    "reaction-diffusion",
+    "ring-current-fluctuations",
+    "rotating-reservoir",
+    "single-file-memory",
+    "superconducting-heat",
+    "swirling-heat-tails"
+  ],
+  "model": "gpt-5.6-luna",
+  "reasoning_effort": "high",
+  "hint": "none",
+  "panels": {
+    "baseline": {
+      "planned": 15,
+      "recorded": 3,
+      "passes": 1,
+      "hidden_passes": 1,
+      "exception_free_passes": 1,
+      "audit_step_timeouts": 0,
+      "incomplete_handoffs": 0,
+      "timeouts": 0,
+      "missing_artifacts": 0,
+      "errors": 0,
+      "pass_rate": null
+    },
+    "early-written": {
+      "planned": 15,
+      "recorded": 3,
+      "passes": 0,
+      "hidden_passes": 1,
+      "exception_free_passes": 0,
+      "audit_step_timeouts": 6,
+      "incomplete_handoffs": 1,
+      "timeouts": 1,
+      "missing_artifacts": 0,
+      "errors": 0,
+      "pass_rate": null
+    },
+    "delayed-written": {
+      "planned": 15,
+      "recorded": 3,
+      "passes": 1,
+      "hidden_passes": 1,
+      "exception_free_passes": 0,
+      "audit_step_timeouts": 6,
+      "incomplete_handoffs": 0,
+      "timeouts": 1,
+      "missing_artifacts": 0,
+      "errors": 0,
+      "pass_rate": null
+    }
+  },
+  "cells": {
+    "entropy-anomaly--baseline": [
+      {
+        "trial": "entropy-anomaly--baseline__nRXHPFC",
+        "status": "fail",
+        "reward": 0.0,
+        "errors": [],
+        "wall_seconds": 295.51141,
+        "steps": [
+          {
+            "name": "baseline",
+            "seconds": 185.740617,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 281945,
+            "n_cache_tokens": 260480,
+            "n_output_tokens": 9001,
+            "cost_usd": 0.020303799999999997
+          }
+        ],
+        "totals": {
+          "seconds": 185.740617,
+          "n_input_tokens": 281945,
+          "n_cache_tokens": 260480,
+          "n_output_tokens": 9001,
+          "cost_usd": 0.020303799999999997
+        }
+      }
+    ],
+    "entropy-anomaly--early-written": [
+      {
+        "trial": "entropy-anomaly--early-written__yY8DLRv",
+        "status": "timeout",
+        "reward": 1.0,
+        "errors": [
+          "AgentTimeoutError"
+        ],
+        "wall_seconds": 763.447201,
+        "steps": [
+          {
+            "name": "derive",
+            "seconds": 122.50909,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 71520,
+            "n_cache_tokens": 59520,
+            "n_output_tokens": 5560,
+            "cost_usd": 0.0102624
+          },
+          {
+            "name": "design",
+            "seconds": 77.568829,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 108789,
+            "n_cache_tokens": 95744,
+            "n_output_tokens": 3005,
+            "cost_usd": 0.00812988
+          },
+          {
+            "name": "review",
+            "seconds": 107.536025,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 131126,
+            "n_cache_tokens": 109952,
+            "n_output_tokens": 5144,
+            "cost_usd": 0.012606639999999999
+          },
+          {
+            "name": "repair",
+            "seconds": 302.526082,
+            "exception": "AgentTimeoutError",
+            "handoff": null,
+            "n_input_tokens": 437567,
+            "n_cache_tokens": 406912,
+            "n_output_tokens": 15123,
+            "cost_usd": 0.032416839999999995
+          }
+        ],
+        "totals": {
+          "seconds": 610.1400259999999,
+          "n_input_tokens": 749002,
+          "n_cache_tokens": 672128,
+          "n_output_tokens": 28832,
+          "cost_usd": 0.06341575999999999
+        }
+      }
+    ],
+    "entropy-anomaly--delayed-written": [
+      {
+        "trial": "entropy-anomaly--delayed-written__eBATjej",
+        "status": "timeout",
+        "reward": 0.0,
+        "errors": [
+          "AgentTimeoutError"
+        ],
+        "wall_seconds": 769.250458,
+        "steps": [
+          {
+            "name": "derive",
+            "seconds": 119.464168,
+            "exception": null,
+            "handoff": 1,
+            "n_input_tokens": 90751,
+            "n_cache_tokens": 77184,
+            "n_output_tokens": 5794,
+            "cost_usd": 0.011209880000000002
+          },
+          {
+            "name": "design",
+            "seconds": 77.567991,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 67339,
+            "n_cache_tokens": 57600,
+            "n_output_tokens": 1145,
+            "cost_usd": 0.0044738
+          },
+          {
+            "name": "review",
+            "seconds": 107.461082,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 171200,
+            "n_cache_tokens": 151808,
+            "n_output_tokens": 4832,
+            "cost_usd": 0.012712959999999999
+          },
+          {
+            "name": "repair",
+            "seconds": 302.486428,
+            "exception": "AgentTimeoutError",
+            "handoff": null,
+            "n_input_tokens": 466380,
+            "n_cache_tokens": 436224,
+            "n_output_tokens": 10509,
+            "cost_usd": 0.027366479999999995
+          }
+        ],
+        "totals": {
+          "seconds": 606.9796690000001,
+          "n_input_tokens": 795670,
+          "n_cache_tokens": 722816,
+          "n_output_tokens": 22280,
+          "cost_usd": 0.05576312
+        }
+      }
+    ],
+    "finite-ion-cloud--baseline": [
+      {
+        "trial": "finite-ion-cloud--baseline__EUzTvmA",
+        "status": "pass",
+        "reward": 1.0,
+        "errors": [],
+        "wall_seconds": 565.242916,
+        "steps": [
+          {
+            "name": "baseline",
+            "seconds": 406.136639,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 873244,
+            "n_cache_tokens": 826112,
+            "n_output_tokens": 16354,
+            "cost_usd": 0.04557344
+          }
+        ],
+        "totals": {
+          "seconds": 406.136639,
+          "n_input_tokens": 873244,
+          "n_cache_tokens": 826112,
+          "n_output_tokens": 16354,
+          "cost_usd": 0.04557344
+        }
+      }
+    ],
+    "finite-ion-cloud--early-written": [
+      {
+        "trial": "finite-ion-cloud--early-written__43sP9G5",
+        "status": "fail",
+        "reward": 0.0,
+        "errors": [
+          "AgentTimeoutError"
+        ],
+        "wall_seconds": 461.282836,
+        "steps": [
+          {
+            "name": "derive",
+            "seconds": 60.334558,
+            "exception": null,
+            "handoff": 1,
+            "n_input_tokens": 61697,
+            "n_cache_tokens": 53120,
+            "n_output_tokens": 2676,
+            "cost_usd": 0.0059889999999999995
+          },
+          {
+            "name": "design",
+            "seconds": 69.506698,
+            "exception": null,
+            "handoff": 1,
+            "n_input_tokens": 82571,
+            "n_cache_tokens": 71808,
+            "n_output_tokens": 3061,
+            "cost_usd": 0.00726196
+          },
+          {
+            "name": "review",
+            "seconds": 107.502929,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 83523,
+            "n_cache_tokens": 68352,
+            "n_output_tokens": 4065,
+            "cost_usd": 0.009279240000000001
+          },
+          {
+            "name": "repair",
+            "seconds": 114.485143,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 198723,
+            "n_cache_tokens": 179584,
+            "n_output_tokens": 5194,
+            "cost_usd": 0.01365228
+          }
+        ],
+        "totals": {
+          "seconds": 351.829328,
+          "n_input_tokens": 426514,
+          "n_cache_tokens": 372864,
+          "n_output_tokens": 14996,
+          "cost_usd": 0.03618248
+        }
+      }
+    ],
+    "finite-ion-cloud--delayed-written": [
+      {
+        "trial": "finite-ion-cloud--delayed-writte__4M3j8nb",
+        "status": "pass",
+        "reward": 1.0,
+        "errors": [
+          "AgentTimeoutError"
+        ],
+        "wall_seconds": 626.310242,
+        "steps": [
+          {
+            "name": "derive",
+            "seconds": 58.812566,
+            "exception": null,
+            "handoff": 1,
+            "n_input_tokens": 74790,
+            "n_cache_tokens": 66560,
+            "n_output_tokens": 2655,
+            "cost_usd": 0.006163200000000001
+          },
+          {
+            "name": "design",
+            "seconds": 77.540195,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 89711,
+            "n_cache_tokens": 81152,
+            "n_output_tokens": 2482,
+            "cost_usd": 0.00631324
+          },
+          {
+            "name": "review",
+            "seconds": 107.551743,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 109840,
+            "n_cache_tokens": 94592,
+            "n_output_tokens": 5203,
+            "cost_usd": 0.01118504
+          },
+          {
+            "name": "repair",
+            "seconds": 293.451997,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 490060,
+            "n_cache_tokens": 460928,
+            "n_output_tokens": 11336,
+            "cost_usd": 0.028648160000000002
+          }
+        ],
+        "totals": {
+          "seconds": 537.356501,
+          "n_input_tokens": 764401,
+          "n_cache_tokens": 703232,
+          "n_output_tokens": 21676,
+          "cost_usd": 0.052309640000000004
+        }
+      }
+    ],
+    "finite-layer-phoresis--baseline": [
+      {
+        "trial": "finite-layer-phoresis--baseline__ttE4fU5",
+        "status": "fail",
+        "reward": 0.0,
+        "errors": [],
+        "wall_seconds": 309.69549,
+        "steps": [
+          {
+            "name": "baseline",
+            "seconds": 236.741446,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 199912,
+            "n_cache_tokens": 174976,
+            "n_output_tokens": 11916,
+            "cost_usd": 0.02278592
+          }
+        ],
+        "totals": {
+          "seconds": 236.741446,
+          "n_input_tokens": 199912,
+          "n_cache_tokens": 174976,
+          "n_output_tokens": 11916,
+          "cost_usd": 0.02278592
+        }
+      }
+    ],
+    "finite-layer-phoresis--early-written": [
+      {
+        "trial": "finite-layer-phoresis--early-wri__LWjqQZ9",
+        "status": "fail",
+        "reward": 0.0,
+        "errors": [
+          "AgentTimeoutError"
+        ],
+        "wall_seconds": 491.638157,
+        "steps": [
+          {
+            "name": "derive",
+            "seconds": 122.507493,
+            "exception": "AgentTimeoutError",
+            "handoff": 0,
+            "n_input_tokens": 81022,
+            "n_cache_tokens": 69888,
+            "n_output_tokens": 5669,
+            "cost_usd": 0.01042736
+          },
+          {
+            "name": "design",
+            "seconds": 72.357181,
+            "exception": null,
+            "handoff": 1,
+            "n_input_tokens": 93867,
+            "n_cache_tokens": 73472,
+            "n_output_tokens": 2703,
+            "cost_usd": 0.00879204
+          },
+          {
+            "name": "review",
+            "seconds": 107.402624,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 149210,
+            "n_cache_tokens": 136192,
+            "n_output_tokens": 4522,
+            "cost_usd": 0.01075384
+          },
+          {
+            "name": "repair",
+            "seconds": 70.723357,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 135538,
+            "n_cache_tokens": 117376,
+            "n_output_tokens": 3150,
+            "cost_usd": 0.009759919999999998
+          }
+        ],
+        "totals": {
+          "seconds": 372.990655,
+          "n_input_tokens": 459637,
+          "n_cache_tokens": 396928,
+          "n_output_tokens": 16044,
+          "cost_usd": 0.03973316
+        }
+      }
+    ],
+    "finite-layer-phoresis--delayed-written": [
+      {
+        "trial": "finite-layer-phoresis--delayed-w__xpt6J9K",
+        "status": "fail",
+        "reward": 0.0,
+        "errors": [
+          "AgentTimeoutError"
+        ],
+        "wall_seconds": 416.230666,
+        "steps": [
+          {
+            "name": "derive",
+            "seconds": 92.170146,
+            "exception": null,
+            "handoff": 1,
+            "n_input_tokens": 78977,
+            "n_cache_tokens": 67712,
+            "n_output_tokens": 4409,
+            "cost_usd": 0.00889804
+          },
+          {
+            "name": "design",
+            "seconds": 77.473963,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 103012,
+            "n_cache_tokens": 86400,
+            "n_output_tokens": 3374,
+            "cost_usd": 0.0090992
+          },
+          {
+            "name": "review",
+            "seconds": 107.435958,
+            "exception": "AgentTimeoutError",
+            "handoff": 1,
+            "n_input_tokens": 33319,
+            "n_cache_tokens": 27776,
+            "n_output_tokens": 837,
+            "cost_usd": 0.0026685199999999997
+          },
+          {
+            "name": "repair",
+            "seconds": 63.894555,
+            "exception": null,
+            "handoff": null,
+            "n_input_tokens": 150804,
+            "n_cache_tokens": 134784,
+            "n_output_tokens": 2676,
+            "cost_usd": 0.00911088
+          }
+        ],
+        "totals": {
+          "seconds": 340.974622,
+          "n_input_tokens": 366112,
+          "n_cache_tokens": 316672,
+          "n_output_tokens": 11296,
+          "cost_usd": 0.02977664
+        }
+      }
+    ]
+  }
+}

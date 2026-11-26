@@ -1,0 +1,115 @@
+diff --git a/scripts/run_science.py b/scripts/run_science.py
+index 00d9f8cdbbb6720abc4d987741596f4cce80237a..7cefe3fe2cd53f247bc85158ca74da46e5e0c431 100644
+--- a/scripts/run_science.py
++++ b/scripts/run_science.py
+@@ -12,12 +12,28 @@ import sys
+ import tempfile
+ import time
+ 
+-
+ ROOT = Path(__file__).resolve().parents[1]
+ 
+ 
+-def save_diffs(job, original):
+-    for snapshot in job.glob("*/artifacts/app"):
++def harbor_command():
++    installed = shutil.which("harbor")
++    if installed and subprocess.run([installed, "--version"], capture_output=True,
++                                    text=True).stdout.strip() == "0.21.0":
++        return [installed]
++    return ["uvx", "--python", "3.13", "harbor@0.21.0"]
++
++
++def restrict_network(task):
++    config = task / "task.toml"
++    content = config.read_text()
++    if "network_mode" in content or content.count("[agent]") != 1:
++        raise ValueError("expected one agent section without an existing network policy")
++    policy = '[agent]\nnetwork_mode = "allowlist"\nallowed_hosts = ["chatgpt.com", "*.openai.com"]'
++    config.write_text(content.replace("[agent]", policy))
++
++
++def save_diffs(job, original, audit=None):
++    for snapshot in job.glob("*/steps/repair/artifacts/app" if audit else "*/artifacts/app"):
+         names = {p.relative_to(snapshot) for p in snapshot.rglob("*") if p.is_file()}
+         names.update(p.relative_to(original) for p in original.rglob("*")
+                      if p.is_file() and p.name != "Dockerfile")
+@@ -39,6 +55,13 @@ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+     parser.add_argument("task", type=Path, help="Task directory, e.g. tasks/qubit-control")
+     parser.add_argument("--agent", choices=("codex", "oracle", "nop"), default="codex")
++    harness = ROOT.parent / "PLB_Harness"
++    if (harness / "physics_audit.py").is_file():
++        sys.path.insert(0, str(harness))
++        from physics_audit import CONDITIONS, prepare_audit
++        parser.add_argument("--audit", choices=CONDITIONS, help="Run the four-stage no-hint physics audit")
++    else:
++        parser.set_defaults(audit=None)
+     parser.add_argument("--solution-model", type=Path, help="Replace the private oracle model for a control run")
+     parser.add_argument("--trials", type=int, default=3)
+     parser.add_argument("--concurrency", type=int, default=3)
+@@ -60,8 +83,11 @@ def main():
+         parser.error("--agent-setup-timeout-multiplier must be positive and finite")
+     if args.solution_model and args.agent != "oracle":
+         parser.error("--solution-model requires --agent oracle")
++    if args.audit and (args.agent != "codex" or args.hint):
++        parser.error("--audit requires an unhinted Codex run")
++    restricted_network = args.restricted_network or bool(args.audit)
+     stamp = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
+-    name = args.job_name or f"{source.name}-{args.agent}-{stamp}"
++    name = args.job_name or f"{source.name}-{args.audit or args.agent}-{stamp}"
+     if Path(name).name != name:
+         parser.error("job name must be a directory name")
+     job = ROOT / "jobs" / name
+@@ -70,12 +96,11 @@ def main():
+     with tempfile.TemporaryDirectory(prefix="science-task-") as tmp:
+         task = Path(tmp) / source.name
+         shutil.copytree(source, task, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", ".git"))
+-        if args.restricted_network:
+-            config = task / "task.toml"
+-            content = config.read_text()
+-            if "network_mode" in content or content.count("[agent]") != 1:
+-                parser.error("restricted-network requires one agent section without an existing network policy")
+-            config.write_text(content.replace("[agent]", '[agent]\nnetwork_mode = "allowlist"\nallowed_hosts = ["chatgpt.com", "*.openai.com"]'))
++        if restricted_network:
++            try:
++                restrict_network(task)
++            except ValueError as exc:
++                parser.error(str(exc))
+         if args.hint:
+             hint = source / "hint.md"
+             if not hint.is_file():
+@@ -84,7 +109,9 @@ def main():
+             instruction.write_text(instruction.read_text().rstrip()+"\n\nPhysics hint:\n"+hint.read_text())
+         if args.solution_model:
+             shutil.copyfile(args.solution_model, task / "solution/model.py")
+-        command = ["uvx", "--python", "3.13", "harbor@0.21.0", "run", "-p", str(task),
++        if args.audit:
++            prepare_audit(task, args.audit)
++        command = [*harbor_command(), "run", "-p", str(task),
+                    "-a", args.agent, "--env", "docker", "-n", str(min(args.concurrency, args.trials)),
+                    "-k", str(args.trials), "--job-name", name]
+         if args.agent == "codex":
+@@ -92,6 +119,8 @@ def main():
+             command += ["-m", args.model, "--ak", "version=0.154.0",
+                         "--ak", f"reasoning_effort={args.reasoning_effort}",
+                         "--ae", f"CODEX_AUTH_JSON_PATH={auth}"]
++            if restricted_network:
++                command += ["--ak", "web_search=disabled"]
+             if args.agent_setup_timeout_multiplier is not None:
+                 command += ["--agent-setup-timeout-multiplier", str(args.agent_setup_timeout_multiplier)]
+         if sys.platform == "darwin" and shutil.which("caffeinate"):
+@@ -112,11 +141,12 @@ def main():
+                     "model": args.model if args.agent == "codex" else None,
+                     "reasoning_effort": args.reasoning_effort if args.agent == "codex" else None,
+                     "physics_hint": args.hint,
++                    "audit": args.audit, "restricted_network": restricted_network,
+                     "started_at": started.isoformat(), "finished_at": finished.isoformat(),
+                     "wall_seconds": wall, "monotonic_seconds": elapsed,
+                     "wall_minus_monotonic_seconds": wall-elapsed,
+                 }, indent=2)+"\n")
+-                save_diffs(job, task / "environment")
++                save_diffs(job, source / "environment" if args.audit else task / "environment", args.audit)
+         raise SystemExit(result.returncode)
+ 
+ 
